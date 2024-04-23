@@ -27,6 +27,16 @@ in
       };
     };
 
+    bash = {
+      enable = true;
+      shellAliases = {
+        butcrack = "ls -a";
+      };
+      bashrcExtra = ''
+        eval "$(oh-my-posh init bash --config ~/ohjson.omp.json)"
+      '';
+    };
+
     git = {
       enable = true;
       userName = "AndrijaSkontra";
@@ -36,7 +46,9 @@ in
 
     kitty = {
       enable = true;
-      # font.name = "FiraCode"; this doesn't work
+      font.package = pkgs.nerdfonts;
+      font.name = "FiraCodeNerdFontMono";
+      font.size = 13;
     };
 
   };
