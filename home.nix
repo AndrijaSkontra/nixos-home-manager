@@ -31,6 +31,7 @@ in
       enable = true;
       shellAliases = {
         butcrack = "ls -a";
+        nixdir = "sudoedit /etc/nixos/configuration.nix";
       };
       bashrcExtra = ''
         eval "$(oh-my-posh init bash --config ~/ohjson.omp.json)"
