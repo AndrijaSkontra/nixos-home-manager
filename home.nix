@@ -49,6 +49,11 @@ in
       font.package = pkgs.nerdfonts;
       font.name = "FiraCodeNerdFontMono";
       font.size = 13;
+      settings = {
+        background_opacity = "0.6";
+        background_blur = 25;
+        active_border_color = "#ad7575";
+      };
     };
 
   };
