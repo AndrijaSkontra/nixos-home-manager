@@ -1,5 +1,4 @@
 { lib, pkgs, ... }:
-# this is a test comment
 let
 username = "shkoki";
 in
@@ -9,12 +8,9 @@ in
       hello
     ];
 
-    # This needs to actually be set to your username
     inherit username;
     homeDirectory = "/home/${username}";
 
-    # You do not need to change this if you're reading this in the future.
-    # Don't ever change this after the first build.  Don't ask questions.
     stateVersion = "23.11";
   };
 
@@ -31,7 +27,8 @@ in
       enable = true;
       shellAliases = {
         butcrack = "ls -a";
-        nixdir = "sudoedit /etc/nixos/configuration.nix";
+        sise = "sudoedit /etc/nixos/configuration.nix";
+        sisb = "sudo nixos-rebuild switch";
       };
       bashrcExtra = ''
         eval "$(oh-my-posh init bash --config ~/ohjson.omp.json)"
