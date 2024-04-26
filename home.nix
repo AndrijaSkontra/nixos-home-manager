@@ -29,6 +29,7 @@ in
         butcrack = "ls -a";
         sise = "sudoedit /etc/nixos/configuration.nix";
         sisb = "sudo nixos-rebuild switch";
+        nvime = "nvim ~/.config/nvim/init.lua";
       };
       bashrcExtra = ''
         eval "$(oh-my-posh init bash --config ~/ohjson.omp.json)"
@@ -46,7 +47,7 @@ in
       enable = true;
       font.package = pkgs.nerdfonts;
       font.name = "FiraCodeNerdFontMono";
-      font.size = 13;
+      font.size = 12;
       settings = {
         background_opacity = "0.6";
         background_blur = 25;
